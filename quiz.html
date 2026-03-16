@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — AdaptLearn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="quiz">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container inner">
+      <a href="dashboard.html" class="brand"><span class="brand-icon">📘</span>AdaptLearn</a>
+      <nav>
+        <a href="topics.html">Topics</a>
+        <a href="progress.html">Progress</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 1.25rem; max-width:700px">
+
+    <div class="mb-3">
+      <h1 class="reveal">Quiz</h1>
+      <p>Answer all questions, then press <strong>Submit</strong>.</p>
+    </div>
+
+    <!-- Alert -->
+    <div id="alertBox"></div>
+
+    <!-- Questions — filled by JS -->
+    <div id="quizWrap">
+      <div class="card">
+        <span class="spinner"></span> Loading questions…
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="mt-3">
+      <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script src="motions.js"></script>
+</body>
+</html>

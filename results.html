@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — AdaptLearn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="results">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container inner">
+      <a href="dashboard.html" class="brand"><span class="brand-icon">📘</span>AdaptLearn</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="topics.html">Topics</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 1.25rem; max-width:660px">
+
+    <h1 class="mb-3">Your Results</h1>
+
+    <!-- Alert -->
+    <div id="alertBox"></div>
+
+    <!-- Score circle -->
+    <div class="card text-center mb-3 reveal">
+      <div class="score-circle">
+        <span class="score-num" id="scorePct">—</span>
+        <span class="score-lbl">Score</span>
+      </div>
+      <p>
+        You got <strong id="scoreNum">—</strong> out of
+        <strong id="totalQuestions">—</strong> correct.
+      </p>
+      <div class="mt-2 flex-center gap-1 flex-wrap">
+        <button id="nextLessonBtn" class="btn btn-primary">Next Lesson →</button>
+        <a href="topics.html" class="btn btn-ghost">Browse Topics</a>
+        <a href="progress.html" class="btn btn-ghost">View Progress</a>
+      </div>
+    </div>
+
+    <!-- Answer Review -->
+    <div class="card">
+      <h3 class="mb-2">Review</h3>
+      <ul class="answer-review stagger" id="answerReview">
+        <!-- Populated by JS -->
+        <li class="text-muted">No review data available.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script src="motions.js"></script>
+</body>
+</html>

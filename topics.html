@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topics — AdaptLearn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="topics">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container inner">
+      <a href="dashboard.html" class="brand"><span class="brand-icon">📘</span>AdaptLearn</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="progress.html">Progress</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 1.25rem">
+
+    <div class="mb-3">
+      <h1 class="reveal">Choose a Topic</h1>
+      <p>Select any subject to explore lessons.</p>
+    </div>
+
+    <!-- Alert -->
+    <div id="alertBox"></div>
+
+    <!-- Topics grid — filled by JS -->
+    <div class="grid-2 stagger" id="topicsGrid">
+      <div class="topic-card" style="opacity:.5; pointer-events:none">
+        <span class="spinner"></span> Loading topics…
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script src="motions.js"></script>
+</body>
+</html>

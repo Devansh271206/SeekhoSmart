@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress — AdaptLearn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="progress">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container inner">
+      <a href="dashboard.html" class="brand"><span class="brand-icon">📘</span>AdaptLearn</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="topics.html">Topics</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 1.25rem">
+
+    <div class="mb-3">
+      <h1 class="reveal">Your Progress</h1>
+      <p>Track your learning journey, <span data-username>Learner</span>.</p>
+    </div>
+
+    <!-- Alert -->
+    <div id="alertBox"></div>
+
+    <!-- Stats -->
+    <div class="stat-row stagger reveal">
+      <div class="stat-box">
+        <div class="stat-val" id="totalLessons">—</div>
+        <div class="stat-lbl">Lessons Done</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val" id="totalTopics">—</div>
+        <div class="stat-lbl">Topics Done</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val" id="accuracyPct">—</div>
+        <div class="stat-lbl">Accuracy</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val" id="totalQuizzes">—</div>
+        <div class="stat-lbl">Quizzes Taken</div>
+      </div>
+    </div>
+
+    <!-- Overall progress bar -->
+    <div class="card mb-3">
+      <div class="flex-between mb-1">
+        <h3>Overall Completion</h3>
+        <span id="overallPct" class="badge">0%</span>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-bar" id="overallBar" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Completed Topics -->
+    <div class="card">
+      <h3 class="mb-2">Completed Topics</h3>
+      <ul class="completed-list stagger" id="completedList">
+        <li class="text-muted" style="padding:.4rem 0">
+          <span class="spinner"></span> Loading…
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script src="motions.js"></script>
+</body>
+</html>

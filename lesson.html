@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson — AdaptLearn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="lesson">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container inner">
+      <a href="dashboard.html" class="brand"><span class="brand-icon">📘</span>AdaptLearn</a>
+      <nav>
+        <a href="topics.html">Topics</a>
+        <a href="progress.html">Progress</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 1.25rem; max-width:720px">
+
+    <!-- Breadcrumb -->
+    <p class="text-muted mb-1">
+      <a href="topics.html">Topics</a> /
+      <span id="lessonTopic">—</span>
+    </p>
+
+    <h1 id="lessonTitle" class="mb-2">Loading lesson…</h1>
+
+    <!-- Alert -->
+    <div id="alertBox"></div>
+
+    <!-- Lesson content -->
+    <div class="lesson-body" id="lessonBody">
+      <span class="spinner"></span> Loading content…
+    </div>
+
+    <!-- Navigation -->
+    <div class="lesson-nav">
+      <button id="prevBtn" class="btn btn-ghost">← Previous</button>
+      <button id="startQuizBtn" class="btn btn-primary">Start Quiz</button>
+      <button id="nextBtn" class="btn btn-outline">Next →</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script src="motions.js"></script>
+</body>
+</html>

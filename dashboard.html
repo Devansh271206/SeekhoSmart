@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — AdaptLearn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="dashboard">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container inner">
+      <a href="dashboard.html" class="brand"><span class="brand-icon">📘</span>AdaptLearn</a>
+      <nav>
+        <a href="topics.html">Topics</a>
+        <a href="progress.html">Progress</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:2rem 1.25rem">
+
+    <!-- Welcome -->
+    <div class="flex-between flex-wrap gap-1 mb-3">
+      <div>
+        <h1>Welcome back, <span data-username>Learner</span> 👋</h1>
+        <p>Here's where you left off.</p>
+      </div>
+      <a href="topics.html" class="btn btn-primary">Continue Learning →</a>
+    </div>
+
+    <!-- Alert -->
+    <div id="alertBox"></div>
+
+    <!-- Progress Summary -->
+    <div class="card mb-3 reveal">
+      <div class="flex-between mb-1">
+        <h3>Overall Progress</h3>
+        <span id="progressPct" class="badge">0%</span>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Recommended Lessons -->
+    <div class="card">
+      <div class="flex-between mb-2">
+        <h3>Recommended for You</h3>
+        <a href="topics.html" class="text-muted" style="font-size:.85rem">View all topics →</a>
+      </div>
+      <ul class="lesson-list stagger" id="lessonList">
+        <!-- Populated by JS -->
+        <li class="text-muted" style="padding:.5rem 0">
+          <span class="spinner"></span> Loading recommendations…
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script src="motions.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — AdaptLearn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login">
+
+  <div class="page-center">
+    <div class="card card-sm">
+
+      <!-- Brand -->
+      <div class="auth-brand">
+        <a href="index.html" style="text-decoration:none; display:contents">
+          <div class="auth-brand-icon">📘</div>
+        </a>
+        <h2>Welcome back</h2>
+        <p class="text-muted">Sign in to continue learning.</p>
+      </div>
+
+      <!-- Alert area -->
+      <div id="alertBox"></div>
+
+      <!-- Form -->
+      <form id="loginForm" novalidate>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="••••••••"
+            autocomplete="current-password"
+            required>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn btn-primary btn-block mt-2">
+          Sign In
+        </button>
+
+      </form>
+
+      <hr class="divider">
+
+      <p class="text-center text-muted">
+        Don't have an account? <a href="signup.html">Sign up free</a>
+      </p>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="motions.js"></script>
+</body>
+</html>
