@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express    = require('express');
+const path       = require('path');
 const cors       = require('cors');
 const helmet     = require('helmet');
 const morgan     = require('morgan');
@@ -52,6 +53,9 @@ app.use(
     message: { success: false, message: 'Too many requests, please try again later.' },
   })
 );
+
+// Serve static files from the parent directory (frontend)
+app.use(express.static(path.join(__dirname, '..')));
 
 /* ── Routes ───────────────────────────────────────────────────────────────── */
 app.use('/api/auth',     authRoutes);
